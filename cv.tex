@@ -1,0 +1,227 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Two Column One Page Curriculum Vitae
+% LaTeX Template
+% Version 1.1 (24/1/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro (The CV Inn)
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt]{article} % Font size - 10pt, 11pt or 12pt
+
+\usepackage[hmargin=1.25cm, vmargin=1.5cm]{geometry} % Document margins
+
+\usepackage{marvosym} % Required for symbols in the colored box
+\usepackage{ifsym} % Required for symbols in the colored box
+
+\usepackage[usenames,dvipsnames]{xcolor} % Allows the definition of hex colors
+
+% Fonts and tweaks for XeLaTeX
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont[Mapping=tex-text]{Hoefler Text} % Main document font
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans} % Font for your name at the top
+%\setmonofont[Scale=MatchLowercase]{Andale Mono}
+
+% Colors for links, text and headings
+\usepackage{hyperref}
+\definecolor{linkcolor}{HTML}{506266} % Blue-gray color for links
+\definecolor{shade}{HTML}{F5DD9D} % Peach color for the contact information box
+\definecolor{text1}{HTML}{2b2b2b} % Main document font color, off-black
+\definecolor{headings}{HTML}{701112} % Dark red color for headings
+% Other color palettes: shade=B9D7D9 and linkcolor=A40000; shade=D4D7FE and linkcolor=FF0080
+
+\hypersetup{colorlinks,breaklinks, urlcolor=linkcolor, linkcolor=linkcolor} % Set up links and colors
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+% Headers and footers can be added with the \lhead{} \rhead{} \lfoot{} \rfoot{} commands
+% Example footer:
+%\rfoot{\color{headings} {\sffamily Last update: \today}. Typeset with Xe\LaTeX}
+
+\renewcommand{\headrulewidth}{0pt} % Get rid of the default rule in the header
+
+\usepackage{titlesec} % Allows creating custom \section's
+
+% Format of the section titles
+\titleformat{\section}{\color{headings}
+\scshape\Large\raggedright}{}{0em}{}[\color{black}\titlerule]
+
+\titlespacing{\section}{0pt}{0pt}{5pt} % Spacing around titles
+
+\begin{document}
+
+\color{text1} % Sets the default text color for the whole document to the color defined as 'text1'
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\par{\centering{\sffamily\Huge Kunal Singhal}\\ % Your name
+{\color{headings}\fontspec[Variant = 2]{Zapfino} Curriculum {Vit\fontspec[Variant = 3]{Zapfino}\ae}\\[15pt]\par} % Curriculum vitae text in the Zapfino font
+	
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.5\textwidth} % Start the left-hand side of the page
+\vspace{0pt} % Trick for alignment
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education} 
+
+\begin{tabular}{rl} % Start a table with two columns, one for dates and one for qualifications
+
+%------------------------------------------------
+% EDUCATION 1
+%------------------------------------------------
+
+2013 -- \textsc{Present} & \textbf{Bachelor of Technology} \\ 
+& \textsc{Computer Science} \\ 
+& \textit{Indian Institute of Technology Delhi}\\
+& CGPA: 9.56
+%----------------------------------------------------------------------------------------
+
+\end{tabular}\\[10pt]
+
+%----------------------------------------------------------------------------------------
+%	RESEARCH INTERESTS
+%----------------------------------------------------------------------------------------
+
+\section{Research Interests} 
+> Machine Learning and Statistical Analysis\\[5pt]
+> Game and Economic Theory\\[5pt]
+> Processor Design and Computer Architecture\\
+	
+%----------------------------------------------------------------------------------------
+%	SPORT PROGRAMMING
+%----------------------------------------------------------------------------------------
+
+\section{Sport Programming} 
+\begin{itemize}
+\item Indian Team Member in {\bf International Olympiad in \\ Informatics (IOI) 2012}  
+\item My team (team Angle) {\bf ranked 9th in ICPC regionals Amritapuri}, best in IIT Delhi.
+\item Codechef handle : \href{http://www.codechef.com/users/knsn1994}{knsn1994}
+\item TopCoder handle : \href{http://community.topcoder.com/tc?module=MemberProfile&cr=22917652}{knsn1994}
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS and ACHIEVEMENTS
+%----------------------------------------------------------------------------------------
+
+\section{Awards and Achievements} 
+\begin{tabular}{rl}
+\textsc{July 2012} & \textbf{International Physics Olympiad 2012}\\
+& Silver Award\\\\
+\textsc{May 2012} & \textbf{Asian Physics Olympiad 2012}\\
+& Silver Award\\\\
+\textsc{2011} & \textbf{Indian National Mathematics Olympiad 2011}\\
+& All India First Position \\\\
+\textsc{Feb 2013} & \textbf{Institute Silver Medal for Academic}\\ &  {\bf Excellenece }\\
+& Given for obtaining highest CGPA\\\\
+\textsc{Sep 2012} & \textbf{Aditya Birla Scholarship 2012}\\
+& Given only to 15 engineering students all India\\\\
+\textsc{Sep 2012} & \textbf{OP Jindal Engineering and Management }\\ & \textbf{ Scholarship 2012}\\
+& Given to one student of each Year\\\\
+\textsc{2011} & \textbf{KVPY Scholarship 2011}\\
+& Scholarship given for encouraging schience students \\\\
+\end{tabular}\\[10pt]
+%----------------------------------------------------------------------------------------	
+
+\end{minipage} % End the left-hand side of the page
+\hfill
+\begin{minipage}[t]{0.44\textwidth} % Start the right-hand side of the page
+\vspace{0pt} % Trick for alignment
+
+%----------------------------------------------------------------------------------------
+%	COLORED BOX
+%----------------------------------------------------------------------------------------
+
+\colorbox{shade}{\textcolor{text1}{
+\begin{tabular}{c|p{7cm}}
+\raisebox{-4pt}{\textifsymbol{18}} & C94 MP Enclave, Pitampura, New Delhi 110034 \\ % Address
+\raisebox{-3pt}{\Mobilefone} & +91 997 149 0655\\ % Phone number
+\raisebox{-1pt}{\Letter} & \href{mailto:knsn1994@gmail.com}{knsn1994@gmail.com} \\ % Email address
+\Keyboard & \href{http://www.cse.iitd.ernet.in/~cs1120231}{http://www.cse.iitd.ernet.in/$\sim$cs1120231} \\ % Website
+\end{tabular}
+}
+}\\[10pt]
+
+
+%----------------------------------------------------------------------------------------
+%	Courses
+%----------------------------------------------------------------------------------------
+
+\section{Some Courses undertaken at IIT Delhi} 
+
+\begin{tabular}{rl}
+\textsc{Present} & \textbf{Discrete Mathematical Structures}\\
+& \textit{Prof. Ragesh Jaiswal}\\\\
+\textsc{Present} & \textbf{Combinatorics}\\
+& \textit{Prof. Amitabha Tripathi}\\\\
+ \textsc{Present} & \textbf{Computer Architecture}\\
+& \textit{Prof. Smruti Ranjan Sarangi}\\
+& >Made an \href{https://github.com/knsn1994/simplerisc_emulator}{Assembly Emulator}\\\\
+\textsc{Present} & \textbf{Design Practices in}\\ & \textbf{Computer Science}\\
+&>Made a 3D bike race game using openGL \\ 
+&>Working on simulation of a Social Network. \\ \\
+ \textsc{Present} & \textbf{Digital Electronics Circuits}\\
+& \textit{Prof. G.S. Visweswaran}\\\\
+ \textsc{Jan-Apr '13} & \textbf{Data Structures}\\
+& \textit{Prof. Amit Kumar}
+\end{tabular}\\[10pt]
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+
+\section{Designing and Coding Skills} 
+
+\begin{tabular}{rl}
+Extensive
+& \textsc{python}, C++\\[2pt]
+Intermediate
+& \textsc{html5}, \textsc{css3}, \textsc{JavaScript, C}\\ & \textsc{php}, \LaTeX, \textsc{Java, sql, bash, numpy}\\[2pt]
+Basic
+& \textsc{Django Framework, Apple Script}
+\end{tabular}
+\\
+%----------------------------------------------------------------------------------------
+%	COMMUNITY INVOLVEMENT
+%----------------------------------------------------------------------------------------
+
+\section{Research Interests} 
+> Representative at \href{http://www.cse.iitd.ernet.in/~aces/}{ACES (Association of Computer \\  - Engineers, IIT Delhi)}\\
+> Class Convener at IIT Delhi\\
+
+%----------------------------------------------------------------------------------------
+%	OTHER INTERESTS
+%----------------------------------------------------------------------------------------
+
+\section{Other Interests} 
+> I have keen interest in human psychology and philosophy. I also write a blog: \href{http://phyryders.wordpress.com/}{Phyryders}.\\[5pt]
+> I love to play Guitar and Synth. 
+
+%----------------------------------------------------------------------------------------
+	
+\end{minipage} % End right-hand side of the page
+
+\end{document}  

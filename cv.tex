@@ -1,239 +1,203 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Two Column One Page Curriculum Vitae
-% LaTeX Template
-% Version 1.1 (24/1/13)
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
 %
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
+% (c) 2012 Scott Clark <sc932@cornell.edu> cam.cornell.edu/~sc932
 %
-% Original author:
-% Alessandro (The CV Inn)
-%
-% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
-%
-% This template uses several fonts not included with Windows/Linux by
-% default. If you get compilation errors saying a font is missing, find the line
-% on which the font is used and either change it to a font included with your
-% operating system or comment the line out to use the default font.
-% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
-\documentclass[10pt]{article} % Font size - 10pt, 11pt or 12pt
-
-\usepackage[hmargin=1.25cm, vmargin=1.5cm]{geometry} % Document margins
-
-\usepackage{marvosym} % Required for symbols in the colored box
-\usepackage{ifsym} % Required for symbols in the colored box
-
-\usepackage[usenames,dvipsnames]{xcolor} % Allows the definition of hex colors
-
-% Fonts and tweaks for XeLaTeX
-\usepackage{fontspec,xltxtra,xunicode}
-\defaultfontfeatures{Mapping=tex-text}
-\setromanfont[Mapping=tex-text]{Hoefler Text} % Main document font
-\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Gill Sans} % Font for your name at the top
-%\setmonofont[Scale=MatchLowercase]{Andale Mono}
-
-% Colors for links, text and headings
+\documentclass[letterpaper,11pt]{article}
+\newlength{\outerbordwidth}
+\pagestyle{empty}
+\raggedbottom
+\raggedright
+\usepackage[svgnames]{xcolor}
+\usepackage{framed}
 \usepackage{hyperref}
-\definecolor{linkcolor}{HTML}{506266} % Blue-gray color for links
-\definecolor{shade}{HTML}{F5DD9D} % Peach color for the contact information box
-\definecolor{text1}{HTML}{2b2b2b} % Main document font color, off-black
-\definecolor{headings}{HTML}{701112} % Dark red color for headings
-% Other color palettes: shade=B9D7D9 and linkcolor=A40000; shade=D4D7FE and linkcolor=FF0080
+\usepackage{tocloft}
+\definecolor{dgray}{gray}{0.4}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=dgray
+}
 
-\hypersetup{colorlinks,breaklinks, urlcolor=linkcolor, linkcolor=linkcolor} % Set up links and colors
+%-----------------------------------------------------------
+%Edit these values as you see fit
 
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-% Headers and footers can be added with the \lhead{} \rhead{} \lfoot{} \rfoot{} commands
-% Example footer:
-%\rfoot{\color{headings} {\sffamily Last update: \today}. Typeset with Xe\LaTeX}
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
 
-\renewcommand{\headrulewidth}{0pt} % Get rid of the default rule in the header
 
-\usepackage{titlesec} % Allows creating custom \section's
+%-----------------------------------------------------------
+%Margin setup
 
-% Format of the section titles
-\titleformat{\section}{\color{headings}
-\scshape\Large\raggedright}{}{0em}{}[\color{black}\titlerule]
+\setlength{\evensidemargin}{-0.25in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\oddsidemargin}{-0.25in}
+\setlength{\paperheight}{11in}
+\setlength{\paperwidth}{8.5in}
+\setlength{\tabcolsep}{0in}
+\setlength{\textheight}{9.5in}
+\setlength{\textwidth}{7in}
+\setlength{\topmargin}{-0.3in}
+\setlength{\topskip}{0in}
+\setlength{\voffset}{0.1in}
 
-\titlespacing{\section}{0pt}{0pt}{5pt} % Spacing around titles
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{\vspace{8pt}
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+    \begin{shaded}
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+    \end{shaded}
+  }\vspace{-5pt}
+}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
 
 \begin{document}
 
-\color{text1} % Sets the default text color for the whole document to the color defined as 'text1'
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+\textbf{\Large Kunal Singhal}  
+& Ph: +91 9971490655 \\ 
+UG, Computer Science and Engineering
+& \href{mailto:kunal.cs112@cse.iitd.ernet.in}{kunal.cs112@cse.iitd.ernet.in}\\
+Indian Institute of Technology Delhi
+& \href{http://www.cse.iitd.ernet.in/~cs1120231}{http://www.cse.iitd.ernet.in/$\sim$cs1120231} \\
+\end{tabular*}
+\\
 
-%----------------------------------------------------------------------------------------
-%	TITLE
-%----------------------------------------------------------------------------------------
 
-\par{\centering{\sffamily\Huge Kunal Singhal}\\ % Your name
-{\color{headings}\fontspec[Variant = 2]{Zapfino} Curriculum {Vit\fontspec[Variant = 3]{Zapfino}\ae}\\[15pt]\par} % Curriculum vitae text in the Zapfino font
-	
-%----------------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Education}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ressubheading{Indian Institute of Technology Delhi}{New Delhi, India}{Bachelor of Technology}{2012 - 2016 (expected)}
 
-\begin{minipage}[t]{0.5\textwidth} % Start the left-hand side of the page
-\vspace{0pt} % Trick for alignment
+\ \\
+CGPA: 9.56
 
-%----------------------------------------------------------------------------------------
-%	COLORED BOX
-%----------------------------------------------------------------------------------------
 
-\colorbox{shade}{\textcolor{text1}{
-\begin{tabular}{c|p{7cm}}
-\raisebox{-4pt}{\textifsymbol{18}} & C94 MP Enclave, Pitampura, New Delhi 110034 \\ % Address
-\raisebox{-3pt}{\Mobilefone} & +91 997 149 0655\\ % Phone number
-\raisebox{-1pt}{\Letter} & \href{mailto:knsn1994@gmail.com}{knsn1994@gmail.com} \\ % Email address
-\Keyboard & \href{http://www.cse.iitd.ernet.in/~cs1120231}{http://www.cse.iitd.ernet.in/$\sim$cs1120231} \\ % Website
-\end{tabular}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Relavent Courses Taken}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tabbing}
+Computer Architecture \hspace{1.5cm}\= Design Practices in Computer Sciecnce \hspace{1cm}\= Digital Electronic Circuits \\
+Data Structures \> Descrete Mathematical Structures \> Combinatorics \\
+Calculas and Analysis \> Linear Algebra and Matrices \> Quantum Physics\textsuperscript{*} \\ 
+Programming Languages\textsuperscript{*} \> Artificial Intelligence\textsuperscript{*} \> Number Theory\textsuperscript{*}\\
+Game Theory\textsuperscript{\#} \> Cryptography\textsuperscript{\#} \> Machine Learning\textsuperscript{\#} \\ 
+Algorithms\textsuperscript{\#} 
+\end{tabbing}
+\vspace{-0.5cm}
+\hspace{9cm} \footnotesize{*Pursuing in spring 2014 \ \
+\textsuperscript{\#}Online Courses at coursera.org
 }
-}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Awards, Grants \& Honours}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+ \textbf{International Olympiad in Informatics 2012}  & \textsc{July 2012} \\
+Indian Team Member \\\\
+ \textbf{\href{http://www.ipho2012.ee/silver-medalists/}{International Physics Olympiad 2012}}  & \textsc{July 2012} \\
+Silver Award\\\\
+ \textbf{\href{http://www.apho2012india.org/apho-2012/results}{Asian Physics Olympiad 2012}} & \textsc{May 2012} \\
+Silver Award\\\\
+ \textbf{\href{http://olympiads.hbcse.tifr.res.in/subjects/mathematics/inmo-2011-awardees/at_download/file}{Indian National Mathematics Olympiad 2011}} & \textsc{2011} \\
+All India First Position \\\\
+ \textbf{Institute Silver Medal for Academic Excellenece } & \textsc{Feb 2013} \\
+Given for obtaining highest CGPA at IIT Delhi\\\\
+ \textbf{\href{http://jee.iitd.ac.in/}{IIT-JEE 2012} All India Rank 18} & \textsc{May 2012} \\
+Got 18th rank among more than 500,000 students\\\\
+ \textbf{\href{http://www.adityabirlascholars.net/abgs_circle/2012.aspx}{Aditya Birla Scholarship 2012}} & \textsc{Sep 2012} \\
+Given only to 15 engineering students all India\\\\
+ \textbf{\href{http://www.opjems.com/opjems_scholars.aspx}{OP Jindal Engineering and Management Scholarship 2012}} & \textsc{Sep 2012} \\
+Given to one student of each Year\\\\
+ \textbf{\href{http://www.kvpy.org.in/main/}{KVPY} Scholarship 2011} & \textsc{2011} \\
+Scholarship given for encouraging schience students \\\\
+ \textbf{\href{http://aieee.nic.in/aieee2012/aieee/welcome.html}{AIEEE} 2012 All India Rank 19} & \textsc{May 2012} \\
+Got 19th position among over 1 million students.
+\end{tabular*}
 
 
-%----------------------------------------------------------------------------------------
-%	RESEARCH INTERESTS
-%----------------------------------------------------------------------------------------
+\clearpage
 
-\section{Research Interests} 
-\begin{itemize} \itemsep 1pt
-\item Machine Learning and Statistical Analysis
-\item Game Theory
-\item Processor Design and Computer Architecture
-\item Application of Number Theory in Cryptogaphy
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Projects}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+
+\item {\large \textbf{\href{https://github.com/knsn1994/HitchHiker-s-Rover--GAME-}{3D bike race game} } \hspace{7.2cm} Prof. Subodh Kumar, 2012}\\ 
+-Used OpenGL as graphics library. \\
+-A dedicated physics engine was programmed. \\
+-A database for High Scores is maintained. \\
+-Used frustum culling for enhanchning the game speed. \\[10pt]
+
+\item {\large \textbf{\href{https://github.com/knsn1994/simplerisc_emulator}{Assembly Emulator} } \hspace{5.6cm} Prof. Smruti Ranjan Sarangi, 2012} \\ 
+-Supports ARM assembly and SimpleRisc Assembly codes. \\ 
+-Supports free flow of the code. \\
+-Python's high order techniques like lambda functions, maps and filters used for programming the emulator. \\[10pt]
+
+\item {\large \textbf{Social Network Simulation and Analysis} \hspace{3cm} Prof. Subodh Kumar, 2012}\\ 
+-Multiprocessing and multithread used to achieve simulation. \\ 
+-Iter process communication is eastablished by {\bf Message Queues}\\
+-Final network after the simulation is stored as a graphml file. \\
+-In the analysis of  the network, various queries such as shotest path, importance and clique size can be performed.
+
 \end{itemize}
-	
-%----------------------------------------------------------------------------------------
-%	SPORT PROGRAMMING
-%----------------------------------------------------------------------------------------
 
-\section{Sport Programming} 
-\begin{itemize} \itemsep 1pt
-\item Indian Team Member in {\bf International Olympiad in \\ Informatics (IOI) 2012}  
-\item My team (team Angle) {\bf ranked 9th in ICPC regionals Amritapuri}, best in IIT Delhi.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Sport Programming}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+
+\item Indian team member in \textbf{International Olympiad in Informatics, 2012}
+\item My team (team Angle) \textbf{ranked 9th in ICPC Amritapuri Regionals.} Best in IIT Delhi. 
 \item Codechef handle : \href{http://www.codechef.com/users/knsn1994}{knsn1994}
 \item TopCoder handle : \href{http://community.topcoder.com/tc?module=MemberProfile&cr=22917652}{knsn1994}
 \end{itemize}
 
-%----------------------------------------------------------------------------------------
-%	AWARDS and ACHIEVEMENTS
-%----------------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Designing and Coding Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Awards and Achievements} 
-\begin{tabular}{rl}
-\textsc{July 2012} & \textbf{\href{http://www.ipho2012.ee/silver-medalists/}{International Physics Olympiad 2012}}\\
-& Silver Award\\\\
-\textsc{May 2012} & \textbf{\href{http://www.apho2012india.org/apho-2012/results}{Asian Physics Olympiad 2012}}\\
-& Silver Award\\\\
-\textsc{2011} & \textbf{\href{http://olympiads.hbcse.tifr.res.in/subjects/mathematics/inmo-2011-awardees/at_download/file}{Indian National Mathematics Olympiad 2011}}\\
-& All India First Position \\\\
-\textsc{Feb 2013} & \textbf{Institute Silver Medal for Academic}\\ &  {\bf Excellenece }\\
-& Given for obtaining highest CPI at IIT Delhi\\\\
-\textsc{May 2012} & \textbf{\href{http://jee.iitd.ac.in/}{IIT-JEE 2012} All India Rank 18}\\
-& Got 18th rank among more than 500,000 students\\\\
-\textsc{Sep 2012} & \textbf{\href{http://www.adityabirlascholars.net/abgs_circle/2012.aspx}{Aditya Birla Scholarship 2012}}\\
-& Given only to 15 engineering students all India\\\\
-\textsc{Sep 2012} & \textbf{\href{http://www.opjems.com/opjems_scholars.aspx}{OP Jindal Engineering and Management }}\\ & \textbf{\href{http://www.opjems.com/opjems_scholars.aspx}{ Scholarship 2012}}\\
-& Given to one student of each Year\\\\
-\textsc{2011} & \textbf{\href{http://www.kvpy.org.in/main/}{KVPY} Scholarship 2011}\\
-& Scholarship given for encouraging schience students \\\\
-\textsc{May 2012} & \textbf{\href{http://aieee.nic.in/aieee2012/aieee/welcome.html}{AIEEE} 2012 All India Rank 19}\\
-& Got 19th position among over 1 million students.
-\end{tabular}
-%----------------------------------------------------------------------------------------	
-
-\end{minipage} % End the left-hand side of the page
-\hfill
-\begin{minipage}[t]{0.44\textwidth} % Start the right-hand side of the page
-\vspace{0pt} % Trick for alignment
-
-
-
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-
-\section{Education} 
-
-\begin{tabular}{rl} % Start a table with two columns, one for dates and one for qualifications
-
-%------------------------------------------------
-% EDUCATION 1
-%------------------------------------------------
-
-2013 -- \textsc{Present} & \textbf{Bachelor of Technology} \\ 
-& \textsc{Computer Science} \\ 
-& \textit{Indian Institute of Technology Delhi}\\
-& CPI: 9.56
-%----------------------------------------------------------------------------------------
-
-\end{tabular}\\[10pt]
-%----------------------------------------------------------------------------------------
-%	Courses
-%----------------------------------------------------------------------------------------
-
-\section{Some Courses undertaken at IIT Delhi} 
-
-\begin{tabular}{rl}
-\textsc{Present} & \textbf{Discrete Mathematical Structures}\\
-& \textit{Prof. Ragesh Jaiswal}\\\\
-\textsc{Present} & \textbf{Combinatorics}\\
-& \textit{Prof. Amitabha Tripathi}\\\\
- \textsc{Present} & \textbf{Computer Architecture}\\
-& \textit{Prof. Smruti Ranjan Sarangi}\\
-& >Made an \href{https://github.com/knsn1994/simplerisc_emulator}{Assembly Emulator}\\\\
-\textsc{Present} & \textbf{Design Practices in}\\ & \textbf{Computer Science}\\
-&>Made a \href{https://github.com/knsn1994/HitchHiker-s-Rover--GAME-}{3D bike race game} using openGL \\ 
-&>Working on simulation of a Social Network. \\ \\
- \textsc{Present} & \textbf{Digital Electronics Circuits}\\
-& \textit{Prof. G.S. Visweswaran}\\\\
- \textsc{Jan-Apr '13} & \textbf{Data Structures}\\
-& \textit{Prof. Amit Kumar}
-\end{tabular}\\[10pt]
-
-%----------------------------------------------------------------------------------------
-%	COMPUTER SKILLS
-%----------------------------------------------------------------------------------------
-
-\section{Designing and Coding Skills} 
-
-\begin{tabular}{rl}
-Extensive
+\begin{tabular*}{5in}{l@{\extracolsep{\fill}}l}
+{\bf Extensive}
 & \textsc{python}, C++\\[2pt]
-Intermediate
-& \textsc{html5}, \textsc{css3}, \textsc{JavaScript, C}\\ & \textsc{php}, \LaTeX, \textsc{Java, sql, bash, numpy}\\[2pt]
-Basic
-& \textsc{Django Framework, Apple Script}\\
-& \textsc{Standard ML, BASIC, Perl}
-\end{tabular}
-\\
-%----------------------------------------------------------------------------------------
-%	COMMUNITY INVOLVEMENT
-%----------------------------------------------------------------------------------------
+{\bf Intermediate}
+& \textsc{html5}, \textsc{css3}, \textsc{JavaScript, C, php}, \LaTeX, \textsc{Java, sql, bash, numpy}\\[2pt]
+{\bf Basic}
+& \textsc{Django Framework, Apple Script, Standard ML, BASIC, Perl}
+\end{tabular*}
 
-\section{Community Involvement}
-\begin{itemize} \itemsep1pt 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Community Involvement}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize} 
 \item Representative at \href{http://www.cse.iitd.ernet.in/~aces/}{ACES (Association of Computer Engineers, IIT Delhi)}
-\item Class Convener at IIT Delhi\\
+\item Member of Electronics Club, IIT Delhi
+\item Class Convener at IIT Delhi
 \end{itemize}
 
-%----------------------------------------------------------------------------------------
-%	OTHER INTERESTS
-%----------------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Other Interests}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Other Interests} 
-\begin{itemize} \itemsep1pt
+\begin{itemize}
 \item I have keen interest in human psychology and philosophy. I also write a blog: \href{http://phyryders.wordpress.com/}{Phyryders}.
 \item I love to play Guitar and Synth. 
+\item I am a part of my hostel Dance Club. 
 \end{itemize}
 
-%----------------------------------------------------------------------------------------
-	
-\end{minipage} % End right-hand side of the page
-
-\end{document}  
+\end{document}
